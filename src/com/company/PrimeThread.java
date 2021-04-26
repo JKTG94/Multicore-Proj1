@@ -7,16 +7,20 @@ public class PrimeThread extends Thread{
 
     public void run(){
         for(int i = 0; i < NUM_END; i ++){
-            if(isPrime(i)) counter++;
+            if(isPrime(i)) addPrime();
         }
     }
 
-    private static boolean isPrime(int x) {
+    public static boolean isPrime(int x) {
         int i;
         if(x <= 1) return false;
         for(i = 2; i < x; i++){
             if((x % i == 0) && (i != x)) return false;
         }
         return true;
+    }
+
+    public synchronized void addPrime(){
+        counter++;
     }
 }

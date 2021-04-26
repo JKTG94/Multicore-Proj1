@@ -2,7 +2,7 @@ package com.company;
 
 public class Main {
     public static int NUM_END = 200000;
-    public static int nThread = 2;
+    public static int nThread = 1;
 
     public static void main(String[] args) throws InterruptedException {
 	// write your code here
